@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+</head>
+
+<body class="" style="background-color: #41a0ff;">
+  <nav class="" style="background-color: #333333;">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a class="flex items-center space-x-3 rtl:space-x-reverse">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap hover:text-[wheat] dark:text-white" id="company-name"></span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+          <li>
+            <a href="#"
+              class="block py-2 px-3 rounded text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Home</a>
+          </li>
+          <li>
+            <a href="https://invictus-ml.streamlit.app/"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Analytics</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">BMR Calculator</a>
+          </li>
+          <li>
+            <a href="#" 
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Health Experts</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex justify-between">
+  <p class="mx-20 text-2xl font-semibold mt-5">Redeem Rewards</p>
+  <p class="mx-20 text-2xl font-semibold mt-5" id="reward">50</p>
+</div>
+  <button onclick="redeemedFunction()" class="bg-[#ffffff] rounded-md px-3 py-2 w-[90%] m-auto product-right mt-5 shadow-md mx-20">
+      <div class="md:flex md:justify-start block">
+        <div class="md:flex-row h-auto flex-start rounded-md p-5">
+          <img src="./img/ISTE.jpeg" alt="Logo"
+            class="rounded-lg " style="height: 70px;" />
+        </div>
+        <div class="flex-col">
+          <p class="font-bold text-2xl pb-5" id="product-name"></p>
+          <div class="flex">
+            <p class="font-semibold text-2xl mb-2">ISTE-VESIT<span></span></p>
+            <h2 id="available-quantity"></h2>
+          </div>
+          <div class="flex">
+            <p class="font-light text mb-2">Campus 2 Corporate<br>Rewards-20.<span></span></p>
+            <h2 id="available-quantity"></h2>
+          </div>
+        </div>
+      </div>
+    </div></button>
+  <!-- Put link of Physical exercise Page here -->
+    <a href="">
+    <div class="bg-[#ffffff] rounded-md px-3 py-2 w-[90%] m-auto product-right mt-5 shadow-md">
+      <div class="md:flex md:justify-start block">
+        <div class="md:flex-row h-auto flex-start rounded-md p-5">
+          <img src="./img/CodeCell.jpeg" alt="Logo"
+            class="rounded-lg " style="height: 70px;" />
+        </div>
+        <div class="flex-col">
+          <p class="font-bold text-2xl pb-5" id="product-name"></p>
+          <div class="flex">
+            <p class="font-semibold text-2xl mb-2">Codecell-VESIT<span></span></p>
+     
+          </div>
+          <div class="flex">
+            <p class="font-light text mb-2">Syrus Hackathon<br>Rewards-0<span></span></p>
+     
+          </div>
+        </div>
+      </div>
+    </div></a>
+
+    <div id="redeemed" style="display: none;">
+        <p class="mx-20 text-2xl font-semibold mt-5">Redeemed Rewards</p>
+        <div class="bg-[#ffffff] rounded-md px-3 py-2 w-[90%] m-auto product-right mt-5 shadow-md">
+            <div class="md:flex md:justify-start block">
+              <div class="md:flex-row h-auto flex-start rounded-md p-5">
+                <img src="./img/ISTE.jpeg" alt="Logo"
+                  class="rounded-lg " style="height: 70px;" />
+              </div>
+              <div class="flex-col">
+                <p class="font-bold text-2xl pb-5" id="product-name"></p>
+                <div class="flex">
+                  <p class="font-semibold text-2xl mb-2">ISTE-VESIT<span></span></p>
+                  <h2 id="available-quantity"></h2>
+                </div>
+                <div class="flex">
+                  <p class="font-light text mb-2">Campus 2 Corporate<br>Rewards-20.<span></span></p>
+                  <h2 id="available-quantity"></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+        const menu = document.getElementById("navbar-default");
+
+        button.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+        });
+    });
+
+    function redeemedFunction() {
+        let rewardElement = document.getElementById("reward");
+        let currentReward = Number(rewardElement.innerHTML);
+
+        if (currentReward >= 20) {
+            document.getElementById("redeemed").style.display = "block";
+            let deduct = currentReward - 20;
+            rewardElement.innerHTML = deduct;
+        } else {
+            alert("Insufficient rewards! Cannot redeem.");
+        }
+    }
+</script>
+
+
+</html>
